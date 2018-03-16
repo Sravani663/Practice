@@ -11,7 +11,10 @@ def insertion_sort(array):
     
 if __name__ == '__main__':
     try:
-        raw_input        
+        raw_input
+    except NameError:
+        raw_input = input
+        
     user_input = raw_input('Enter numbers separated by a comma:\n').strip()
     unsorted = [int(item) for item in user_input.split(',')]
     print(insertion_sort(unsorted))
